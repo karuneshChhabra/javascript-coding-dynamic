@@ -1,0 +1,22 @@
+const str= "hello world";
+const checkCharCount=(str) =>{
+
+ if(str.length===0){
+     return '';
+ }
+ else{
+    let jsonObject ={};
+     for(let i of str){
+       if(i===" "){
+           continue;
+       }
+       if(jsonObject[i]>0){
+         jsonObject[i] =jsonObject[i]+1;
+       }else{
+           jsonObject[i] =1;
+       }
+     } 
+     return jsonObject;
+ }
+}    
+checkCharCount(str)
