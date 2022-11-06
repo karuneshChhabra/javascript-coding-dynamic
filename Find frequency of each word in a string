@@ -1,0 +1,20 @@
+//const str ="Karunesh is a hardworking developer. He implement lots of feature in our organization. Karunesh delivered lots of complecated features in our organization."
+const str="Apple Mango Orange Mango Guava Guava Mango";
+
+
+const wordFrequency = (str)=>{
+
+    let words = str.split(" ");
+    let wordfreq ={};
+
+    for(let word of words){
+   if(word in  wordfreq){
+     wordfreq[word]++;
+   }else{
+    wordfreq[word]=1;
+    }
+  }
+ return wordfreq;
+}
+
+console.log(wordFrequency(str));
